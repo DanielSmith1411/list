@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    
-
     class Program
     {
-        class Node
-        {
-            public object Contents; //The variable stored in the node. Change the 'object' to a different data type.
-            public Node Next; //Reference to the next node
-        }
-
         class LinkedList
         {
             public class Node
             {
-                public object Content;
-                public Node Next;
+                public object Contents; //The variable stored in the node. Change the 'object' to a different data type.
+                public Node Next; //Reference to the next node
             }
 
             private Node head;
