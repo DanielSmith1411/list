@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace LinkedList
 {
     class Program
     {
@@ -16,35 +16,58 @@ namespace ConsoleApp1
                 public Node Next; //Reference to the next node
             }
 
-            private Node head;
+            private Node head; //Points to the start of the list
 
             public LinkedList()
             {
-                head = null;
+                head = null; //For the first node, the head will be null. The heads of the next node will reference the node before it.
+            }
+
+            void InsertBeginning(object Contents)
+            {
+                Node newNode = new Node();
+                newNode.Contents = Contents;
+                if (head == null)
+
+                {
+                    newNode.Next = null;
+                }
+                else
+                {
+                    newNode.Next = head;
+                }
+                head = newNode;
+            }
+
+            void InsertAfter(object Contents)
+            {
+
+            }
+
+            void RemoveBeginning(LinkedList Node)
+            {
+
+            }
+
+            void RemoveAfter(LinkedList Node)
+            {
+
+            }
+
+            public int Length(LinkedList Node) //If the function doesn't work, it will be because of this line. Internet search was very unhelpful.
+            {
+                if (Node == null)
+                {
+                    return 0;
+                }
+                return 0;
             }
         }
 
         static public string input;
+    
 
-        void InsertAfter()
-        {
-
-        }
-
-        void RemoveBeginning()
-        {
-
-        }
-
-        void RemoveAfter()
-        {
-
-        }
-
-        void Length() //Whatever you do, don't use an incremental counter. That is cheating.
-        {
-
-        }
+        
 
         static void Main(string[] args) //This is where all functions should be called from. There shouldn't be any inputs above here.
         {
@@ -63,6 +86,10 @@ namespace ConsoleApp1
                 if (input == "test")
                 {
                     Console.WriteLine("The test is successful"); //Replace this line with a function call once a function has been written.
+                }
+                else if (input == "length")
+                {
+                    LinkedList.Length(Node);
                 }
                 else if (input == "quit") //Simple quitting.
                 {
